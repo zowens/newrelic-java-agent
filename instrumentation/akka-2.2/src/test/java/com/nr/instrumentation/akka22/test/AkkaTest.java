@@ -18,7 +18,6 @@ import com.newrelic.test.marker.Java13IncompatibleTest;
 import com.newrelic.test.marker.Java14IncompatibleTest;
 import com.newrelic.test.marker.Java15IncompatibleTest;
 import com.newrelic.test.marker.Java16IncompatibleTest;
-import com.newrelic.test.marker.Java7IncompatibleTest;
 import com.nr.instrumentation.akka22.test.actors.broadcasting.ActorA;
 import com.nr.instrumentation.akka22.test.actors.broadcasting.ActorB;
 import com.nr.instrumentation.akka22.test.actors.broadcasting.ActorC;
