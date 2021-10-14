@@ -29,9 +29,3 @@ site {
     title 'Netty Reactor'
     type 'Appserver'
 }
-
-test {
-    onlyIf {
-        !project.hasProperty('test7')
-    }
-}

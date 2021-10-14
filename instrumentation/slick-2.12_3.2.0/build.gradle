@@ -26,13 +26,6 @@ verifyInstrumentation {
     exclude 'com.typesafe.slick:slick_2.11:3.2.0-M1'
 }
 
-test {
-    // instrumentation is incompatible with version of java less than 1.8
-    onlyIf {
-        !project.hasProperty('test7')
-    }
-}
-
 site {
     title 'Slick'
     type 'Datastore'

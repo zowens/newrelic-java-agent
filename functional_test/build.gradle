@@ -129,8 +129,6 @@ test {
         jvmArgs += ["--add-modules", "java.xml.bind"]
     } else if (project.hasProperty("test8")) {
         executable = jdk8 + '/bin/java'
-    } else if (project.hasProperty("test7")) {
-        executable = jdk7 + '/bin/java'
     }
 
     minHeapSize = "256m"

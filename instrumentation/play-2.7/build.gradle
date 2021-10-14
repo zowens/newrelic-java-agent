@@ -57,12 +57,6 @@ verifyInstrumentation {
     excludeRegex'.*-RC[0-9]*'
 }
 
-test {
-    onlyIf {
-        !project.hasProperty('test7')
-    }
-}
-
 compileTestScala {
     options.compilerArgs += '-proc:none'
 
