@@ -8,7 +8,7 @@ on:
     branches: [ main ] ## branches TBD
     types: [opened, synchronize, reopened] ## Types TBD
   push:
-    branches: [ main ]
+    branches: [ tcrone/reenable-mule-ait ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
@@ -36,7 +36,7 @@ jobs:
           - embedded_jetty.py
           - glassfish.py
           - jetty.py
-#          - mule.py
+          - mule.py
 #          - resin.py
           - solr.py
           - solr5.py
