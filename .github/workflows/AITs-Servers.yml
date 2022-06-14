@@ -1,4 +1,4 @@
-name: AITs - Servers (7 disabled)
+name: AITs - Servers (4 disabled)
 # We need to set java home to JDK 8
 # Also configure workflow_dispatch fr all workflows - add github ref
 # Force build
@@ -36,8 +36,8 @@ jobs:
           - embedded_jetty.py
           - glassfish.py
           - jetty.py
-#          - mule.py
-#          - resin.py
+          - mule.py
+          - resin.py
           - solr.py
           - solr5.py
           - tomcat.py
