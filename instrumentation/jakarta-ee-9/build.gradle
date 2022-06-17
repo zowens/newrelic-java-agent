@@ -1,0 +1,21 @@
+
+dependencies {
+    implementation(project(":agent-bridge"))
+    implementation("jakarta.platform:jakarta.jakartaee-api:9.0.0")
+}
+
+jar {
+    manifest { attributes 'Implementation-Title': 'com.newrelic.instrumentation.jakarta-ee-9' }
+}
+
+verifyInstrumentation {
+
+    passesOnly 'jakarta.platform:jakartaee-api:[9.0.0,)'
+
+    exclude 'javax.servlet:servlet-api:2.4.public_draft'
+}
+
+site {
+    title 'Jakarta EE 9'
+    type 'Framework'
+}
