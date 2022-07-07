@@ -34,6 +34,7 @@ jobs:
         # functional_path: [basic_features, datastore]
         func_tests:
           - jakarta/jakartaee8.py
+          - lettuce/lettuce.py
 
     steps:
       - uses: actions/checkout@v2
