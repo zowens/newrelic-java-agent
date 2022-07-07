@@ -52,6 +52,57 @@ jobs:
         run: |
           printenv | sort -f
 
+      # Apps repos/caches - this prpcess could be a candidate for custom action
+      - name: Checkout Cache 1
+        uses: actions/checkout@v2
+        with:
+          repository: newrelic/java-ait-cache-1
+          ref: gha
+          token: ${{ secrets.AITPAT }}
+          path: appcache1
+          lfs: true
+
+      - name: Checkout Cache 2
+        uses: actions/checkout@v2
+        with:
+          repository: newrelic/java-ait-cache-2
+          ref: gha
+          token: ${{ secrets.AITPAT }}
+          path: appcache2
+          lfs: true
+
+      - name: Checkout Cache 3
+        uses: actions/checkout@v2
+        with:
+          repository: newrelic/java-ait-cache-3
+          ref: gha
+          token: ${{ secrets.AITPAT }}
+          path: appcache3
+          lfs: true
+
+      - name: Checkout Cache 4
+        uses: actions/checkout@v2
+        with:
+          repository: newrelic/java-ait-cache-4
+          ref: gha
+          token: ${{ secrets.AITPAT }}
+          path: appcache4
+          lfs: true
+
+      # Consolidate caches into one directory
+      - name: Consolidate caches into Apps directory
+        run: |
+          ls -la
+          mkdir apps
+          mv appcache1/* apps/
+          mv appcache2/* apps/
+          mv appcache3/* apps/
+          mv appcache4/* apps/
+          cd apps
+          ls -la
+          ls -la java_test_webapp-master/
+          cd ../
+
 
       ## JDK Installs
 
